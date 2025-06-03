@@ -6,7 +6,7 @@
         content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
   <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations for Synthetic Videos</title>
+  <title>VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations on Synthetic Video Understanding</title>
 
 
   <script>
@@ -46,12 +46,15 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations for Synthetic Videos</h1>
+          <h1 class="title is-1 publication-title">VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations on Synthetic Video Understanding</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://zli12321.github.io">Zongxia Li</a><sup>1*</sup>,</span>
             <span class="author-block">
               <a href="https://wuxiyang1996.github.io/">Xiyang Wu</a><sup>1*</sup>,</span>
+            <span class="author-block">
+              <a href="https://guangyaoshi.github.io/">Guangyao Shi</a><sup>2</sup>,
+            </span>
             <span class="author-block">
               <a href="https://www.linkedin.com/in/yubin-qin/">Yubin Qin</a><sup>1</sup>,
             </span>
@@ -59,13 +62,10 @@
               <a href="https://github.com/SmashedPython">Hongyang Du</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://guangyaoshi.github.io/">Guangyao Shi</a><sup>2</sup>,
+              <a href="https://tianyizhou.github.io/">Tianyi Zhou</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="https://github.com/SmashedPython">Hongyang Du</a><sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.cs.umd.edu/people/dmanocha">Tianyi Zhou</a><sup>1</sup>,
+              <a href="https://www.cs.umd.edu/people/dmanocha">Dinesh Manocha</a><sup>1</sup>,
             </span>
             <span class="author-block">
               <a href="https://users.umiacs.umd.edu/~ying/">Jordan Lee Boyd-Graber</a><sup>1</sup>
@@ -140,7 +140,7 @@
         <div style="max-width: 800px; margin: auto;"> <!-- Adjust max-width as needed -->
           <h2 class="subtitle has-text-justified">
             <br>
-            <strong>VideoHallu</strong> is a synthetic video benchmark with QA pairs requiring human-level reasoning. Evaluating and post-training SoTA MLLMs on commonsense/physics data shows its impact on improving model reasoning.
+            <strong>VideoHallu</strong> is a benchmark of over 3,000 synthetic videos with expert-crafted counterintuitive QA pairs, evaluating MLLMs' ability to detect perceptually obvious abnormalities often missed due to language priors.
           </h2>
         </div>
       </div>
@@ -157,13 +157,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-          Synthetic video generation using foundation models has gained significant attention due to its realism and broad applications. However, while these models excel at generating visually coherent and high-quality video frames, they often overlook commonsense reasoning and physical law violations, leading to abnormal content. Existing score-based evaluations like VideoScore mainly focus on general video quality and do not take these abnormalities into account, and offer no explanations of the evaluation results. A more promising evaluation approach is to leverage multi-modal large language models (MLLMs) as interpretable video evaluators, following the approach of FActScore. <strong>However, how well MLLMs can detect these abnormalities in synthetic videos is underexplored.</strong>
-          </p>
-          <p>
-          Motivated by a more interpretable video generation evaluation, we introduce <strong>VideoHallu</strong>, a benchmark built from synthetic videos produced by popular models like Sora, Veo2, Kling, paired with expert-crafted question-answering pair examples easily solvable with human-level perception and reasoning across multiple categories. We evaluate several State-of-the-Art (SoTA) MLLMs with our benchmark, including GPT-4o, Gemini-2.5-Pro, Qwen-2.5-VL, and forefront models like Video-R1 and VideoChat-R1. Despite the strong performance of R1 MLLMs on real-world video benchmarks like MVBench and MovieChat, these models still struggle and hallucinate on basic commonsense and physics reasoning tasks in synthetic videos, highlighting <strong>synthetic video hallucination</strong> as an underexplored challenge.
-          </p>
-          <p>
-          Moreover, we post-train current SoTA MLLMs, Qwen-2.5-VL-7B, with Group Relative Policy Optimization (GRPO) using both real-world and synthetic commonsense/physics datasets. Our results show improved overall accuracy compared to the base model, achieving the highest performance among all models, highlighting the importance of <strong>integrating high-quality counterexamples</strong> to enhance <strong>commonsense and physics reasoning</strong> in MLLMs' language priors.
+            Synthetic video generation has gained significant attention for its realism and broad applications, but remains prone to violations of common sense and physical laws. This highlights the need for reliable abnormality detectors that understand such principles and are robust to hallucinations. To address this, we introduce <strong>VideoHallu</strong>, a benchmark of over 3,000 video QA pairs built from synthetic videos generated by models like Veo2, Sora, and Kling, paired with expert-crafted counterintuitive QA to evaluate the critical thinking abilities of Multi-modal Large Language Models (MLLMs) on abnormalities that are perceptually obvious to humans but often hallucinated due to language priors. VideoHallu evaluates MLLMs' abnormality detection abilities with examples across alignment, consistency, commonsense, and physics. We benchmark SOTA MLLMs, including GPT-4o, Gemini-2.5-Pro, Qwen-2.5-VL, Video-R1, and VideoChat-R1. We observe that these models perform well on many real-world benchmarks like MVBench and MovieChat, but still struggle with basic physics-based and commonsense reasoning in synthetic videos. We further show that post-training with Group Relative Policy Optimization (GRPO), using curriculum learning on datasets combining video QA with counterintuitive commonsense and physics reasoning over real and synthetic videos, improves MLLMs’ abnormality detection and critical thinking, demonstrating the value of targeted training for improving their understanding of commonsense and physical laws.
           </p>
         </div>
       </div>
@@ -175,7 +169,7 @@
   <div class="hero-body">
     <div class="container">
     <h2 class="title is-3">Benchmark</h2>
-      <p>We design our benchmark, VideoHallu, around four question categories aimed at probing hallucinations in synthetic video understanding, organized by the level of reasoning required from MLLMs to perform video-question answering in practice. The benchmark spans from perceptual understanding to high-level abstract reasoning.
+      <p>We design our benchmark, VideoHallu, with four question categories to probe hallucinations in synthetic video understanding, covering perceptual understanding to abstract reasoning:
       </p>
       <br>
       <p>
