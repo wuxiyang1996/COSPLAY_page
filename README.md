@@ -1,14 +1,14 @@
-# Nerfies
+# COS-PLAY
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the repository that contains source code for the [COS-PLAY project page](https://wuxiyang1996.github.io/COSPLAY_page).
 
-If you find Nerfies useful for your work please cite:
+If you find COS-PLAY useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@inproceedings{wu2026cosplay,
+  title={Co-Evolving {LLM} Decision and Skill Bank Agents for Long-Horizon Game Play},
+  author={Wu, Xiyang and others},
+  booktitle={Conference on Language Modeling (COLM)},
+  year={2026}
 }
 ```
 

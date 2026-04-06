@@ -3,23 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="VideoHallu, a benchmark of over 3,000 synthetic videos with expert-crafted counterintuitive QA pairs, evaluating MLLMs' ability to detect perceptually obvious abnormalities often missed due to language priors.">
-  <meta name="keywords" content="Vision-language Model, Video Understanding, Video Generation, Hallucination">
+        content="COS-PLAY: Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Game Play">
+  <meta name="keywords" content="COS-PLAY, LLM agent, game playing, skill bank, co-evolution, GRPO, reinforcement learning">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations on Synthetic Video Understanding</title>
-
-
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
-    gtag('js', new Date());
-
-    gtag('config', 'G-PYVRSFMDRL');
-  </script>
+  <title>COS-PLAY: Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Game Play</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -31,7 +18,6 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/favicon.svg">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
@@ -46,43 +32,39 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations on Synthetic Video Understanding</h1>
+          <h1 class="title is-1 publication-title">COS-PLAY: Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Game Play</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://zli12321.github.io">Zongxia Li</a><sup>1*</sup>,</span>
+              <a href="https://wuxiyang1996.github.io/">Xiyang Wu</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://wuxiyang1996.github.io/">Xiyang Wu</a><sup>1*</sup>,</span>
+              <a href="https://zli12321.github.io/">Zongxia Li</a><sup>1</sup>,</span>
             <span class="author-block">
-              <a href="https://guangyaoshi.github.io/">Guangyao Shi</a><sup>2</sup>,
-            </span>
+              <a href="https://guangyaoshi.github.io/">Guangyao Shi</a><sup>2</sup>,</span>
             <span class="author-block">
-              <a href="https://www.linkedin.com/in/yubin-qin/">Yubin Qin</a><sup>1</sup>,
-            </span>
+              <a href="https://alxai.com/">Alexander Duffy</a><sup>3</sup>,</span>
             <span class="author-block">
-              <a href="https://github.com/SmashedPython">Hongyang Du</a><sup>1</sup>,
-            </span>
+              <a href="https://www.linkedin.com/in/tylermarques/">Tyler Marques</a><sup>3</sup>,</span>
             <span class="author-block">
-              <a href="https://tianyizhou.github.io/">Tianyi Zhou</a><sup>1</sup>,
-            </span>
+              <a href="https://scholar.google.com/citations?user=xcGKR8EAAAAJ&hl=en">Matthew Lyle Olson</a><sup>4</sup>,</span>
             <span class="author-block">
-              <a href="https://www.cs.umd.edu/people/dmanocha">Dinesh Manocha</a><sup>1</sup>,
-            </span>
+              <a href="https://tianyizhou.github.io/">Tianyi Zhou</a><sup>5</sup>,</span>
             <span class="author-block">
-              <a href="https://users.umiacs.umd.edu/~ying/">Jordan Lee Boyd-Graber</a><sup>1</sup>
+              <a href="https://www.cs.umd.edu/people/dmanocha">Dinesh Manocha</a><sup>1</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Maryland, College Park, <sup>2</sup>University of Southern California</span><br>
-            
-            <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            <span class="author-block"><sup>1</sup>University of Maryland, College Park,</span>
+            <span class="author-block"><sup>2</sup>University of Southern California,</span>
+            <span class="author-block"><sup>3</sup>Good Start Labs,</span>
+            <span class="author-block"><sup>4</sup>Independent Researcher,</span>
+            <span class="author-block"><sup>5</sup>Mohamed bin Zayed University of Artificial Intelligence</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
-              <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2505.01481"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -91,7 +73,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2505.01481"
+                <a href="#"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -99,28 +81,109 @@
                   <span>arXiv</span>
                 </a>
               </span>
-              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/zli12321/VideoHallu"
+                <a href="https://github.com/wuxiyang1996/cos-play"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
                   <span>Code</span>
-                  </a>
+                </a>
               </span>
-              <!-- Dataset Link. -->
-                <span class="link-block">
-              <a href="https://huggingface.co/datasets/IntelligenceLab/VideoHallu" target="_blank"
-                class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <img src="images/hf-logo.svg" style="display:block;width:330px;height:240px" />
-                </span>
-                <span>Dataset</span>
-              </a>
-            </span>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- Teaser Figure -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./images/teaser.png" alt="COS-PLAY teaser figure" style="width:100%; border-radius:10px;">
+      <h2 class="subtitle has-text-centered" style="margin-top: 1rem;">
+        <strong>Overview of COS-PLAY.</strong> The decision agent (<span style="color:#e67e22;font-weight:bold;">orange</span>) retrieves skills, updates intentions, and selects actions. After each episode, the skill bank agent (<span style="color:#e74c3c;font-weight:bold;">red</span>) segments trajectories, learns contracts, and curates the skill bank (<span style="color:#8e44ad;font-weight:bold;">purple</span>) via refinement, merging, splitting, or retirement.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Long-horizon interactive environments are a testbed for evaluating agents' skill usage abilities. These environments demand multi-step reasoning, the chaining of multiple skills over many timesteps, and robust decision-making under delayed rewards and partial observability. Games are a good testbed for evaluating agent skill usage in environments.
+          </p>
+          <p>
+            Large Language Models (LLMs) offer a promising alternative as game-playing agents, but they often struggle with consistent long-horizon decision-making because they lack a mechanism to discover, retain, and reuse structured skills across episodes.
+          </p>
+          <p>
+            We present <strong>COS-PLAY</strong>, a co-evolution framework in which an LLM decision agent retrieves skills from a learnable skill bank to guide action taking, while an agent-managed skill pipeline discovers reusable skills from the agent's unlabeled rollouts to form a skill bank. Our framework improves both the decision agent to learn better skill retrieval and action generation, while the skill-bank agent continually extracts, refines, and updates skills together with their contracts. Experiments across six game environments show that <strong>COS-PLAY</strong> with an 8B base model achieves over <strong>25.1%</strong> average reward improvement against four frontier LLM baselines on single-player game benchmarks while remaining competitive on multi-player social reasoning games.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Method Overview -->
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            We propose a co-evolving multi-agent framework for long-horizon video-game decision-making via unsupervised trajectory decomposition and skill-bank refinement. The framework has two components:
+          </p>
+          <p>
+            <strong>(a) Decision Agent A<sub>D</sub></strong>: an LLM-based agent that interacts with the game through primitive actions and skill retrieval. At each step, it summarizes the current state, retrieves relevant skill candidates from the skill bank, updates its intention, selects or switches skills when needed, and executes an action.
+          </p>
+          <p>
+            <strong>(b) Skill Bank Agent A<sub>S</sub></strong>: an LLM-based pipeline that converts unlabeled trajectories into reusable protocol-based skills and learns compact effect contracts for them. It updates the skill bank by proposing new skill candidates, refining low-quality skills, and revising skill protocols over time.
+          </p>
+          <p>
+            Together, the decision agent generates trajectories, and the skill bank agent transforms them into structured skills that support future decisions through skill retrieval and selection. Both agents are updated via <strong>GRPO</strong> using separate LoRA adapters in a unified co-evolution loop.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Framework Components -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Framework Components</h2>
+        <div class="columns is-multiline">
+          <div class="column is-one-third">
+            <div class="box" style="height:100%;">
+              <h4 class="title is-5 has-text-centered"><i class="fas fa-gamepad"></i>&ensp;Decision Agent</h4>
+              <p>Maintains an active skill and current intention. Retrieves skills from the bank, updates a short natural-language intention tag, and executes primitive actions conditioned on the observation, intention, and active skill plan. Trained with two LoRA adapters: <em>skill retrieval</em> and <em>action taking</em>.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="box" style="height:100%;">
+              <h4 class="title is-5 has-text-centered"><i class="fas fa-layer-group"></i>&ensp;Skill Bank Agent</h4>
+              <p>Converts unlabeled trajectories into reusable skills via a four-stage pipeline: <em>boundary proposal</em>, <em>infer segmentation</em>, <em>contract learning</em>, and <em>skill bank maintenance</em>. Trained with three LoRA adapters: <em>segmentation</em>, <em>contract</em>, and <em>curator</em>.</p>
+            </div>
+          </div>
+          <div class="column is-one-third">
+            <div class="box" style="height:100%;">
+              <h4 class="title is-5 has-text-centered"><i class="fas fa-sync-alt"></i>&ensp;Co-Evolution</h4>
+              <p>Better skills improve decision making, and better rollouts improve skill learning. Both agents are jointly updated via GRPO in a closed loop: the decision agent uses the current skill bank, while the skill bank agent converts newly collected rollouts into better reusable skills.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -129,185 +192,510 @@
 </section>
 
 
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <!-- First Image with adjusted size and centered -->
-      <div style="margin-bottom: 0px; text-align: center;"> <!-- Adjust the margin as needed -->
-        <img src="images/teaser.png" alt="Teaser Image" style="width: 1000px; display: block; margin: auto;"> <!-- Adjust width as needed -->
-
-        <!-- Caption with constrained width -->
-        <div style="max-width: 800px; margin: auto;"> <!-- Adjust max-width as needed -->
-          <h2 class="subtitle has-text-justified">
-            <br>
-            <strong>VideoHallu</strong> is a benchmark of over 3,000 synthetic videos with expert-crafted counterintuitive QA pairs, evaluating MLLMs' ability to detect perceptually obvious abnormalities often missed due to language priors.
-          </h2>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Abstract -->
-<section class="section hero is-small">
+<!-- Skill Bank Pipeline -->
+<section class="section" style="background-color: #f5f5f5;">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Skill Bank Pipeline</h2>
         <div class="content has-text-justified">
           <p>
-            Synthetic video generation has gained significant attention for its realism and broad applications, but remains prone to violations of common sense and physical laws. This highlights the need for reliable abnormality detectors that understand such principles and are robust to hallucinations. To address this, we introduce <strong>VideoHallu</strong>, a benchmark of over 3,000 video QA pairs built from synthetic videos generated by models like Veo2, Sora, and Kling, paired with expert-crafted counterintuitive QA to evaluate the critical thinking abilities of Multi-modal Large Language Models (MLLMs) on abnormalities that are perceptually obvious to humans but often hallucinated due to language priors. VideoHallu evaluates MLLMs' abnormality detection abilities with examples across alignment, consistency, commonsense, and physics. We benchmark SOTA MLLMs, including GPT-4o, Gemini-2.5-Pro, Qwen-2.5-VL, Video-R1, and VideoChat-R1. We observe that these models perform well on many real-world benchmarks like MVBench and MovieChat, but still struggle with basic physics-based and commonsense reasoning in synthetic videos. We further show that post-training with Group Relative Policy Optimization (GRPO), using curriculum learning on datasets combining video QA with counterintuitive commonsense and physics reasoning over real and synthetic videos, improves MLLMs’ abnormality detection and critical thinking, demonstrating the value of targeted training for improving their understanding of commonsense and physical laws.
+            The skill bank agent analyzes trajectories through a four-stage pipeline to extract reusable skills and maintain the skill bank over time:
           </p>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="hero-body">
-    <div class="container">
-    <h2 class="title is-3">Benchmark</h2>
-      <p>We design our benchmark, VideoHallu, with four question categories to probe hallucinations in synthetic video understanding, covering perceptual understanding to abstract reasoning:
-      </p>
-      <br>
-      <p>
-          <strong>(a) Alignment</strong> checks if the model correctly identifies and understands entities using visual and textual cues.
-      </p>
-
-      <p>
-          <strong>(b) Spatial-temporal Consistency</strong> examines whether the model can track entity motion across frames.
-      </p>
-      <p>
-          <strong>(c) Common Sense Reasoning</strong> tests if the model can reason based on its knowledge.
-      </p>
-      <p>
-          <strong>(d) Physics</strong> assesses if the model applies physical laws to entity motions and procedural understanding.
-      </p>
-      <br>
-      <div class="image">
-        <img src="images/fig1.png" alt="Teaser Image" style="width: 1000px; display: block; margin: auto;">
-        </div>
+        <div class="columns is-multiline">
+          <div class="column is-half">
+            <div class="box" style="height:100%;">
+              <h4 class="title is-5"><i class="fas fa-cut"></i>&ensp;Boundary Proposal</h4>
+              <p>A heuristic candidate-generation step that identifies plausible skill-transition points using predicate flips, intention-tag changes, reward spikes, and transitions between primitive-action execution and skill-selection steps.</p>
             </div>
+          </div>
+          <div class="column is-half">
+            <div class="box" style="height:100%;">
+              <h4 class="title is-5"><i class="fas fa-puzzle-piece"></i>&ensp;Infer Segmentation</h4>
+              <p>Selects the boundary subset that best explains the trajectory as a sequence of skill segments. Each segment's observed effects are scored against the bank's skill contracts and re-ranked by the skill bank agent.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box" style="height:100%;">
+              <h4 class="title is-5"><i class="fas fa-file-contract"></i>&ensp;Contract Learning</h4>
+              <p>Aggregates added and deleted predicates across segments to learn <em>effect contracts</em>&mdash;compact specifications of reliable state changes. Only verified contracts with sufficiently high pass rates are written back into the bank.</p>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="box" style="height:100%;">
+              <h4 class="title is-5"><i class="fas fa-tools"></i>&ensp;Skill Bank Maintenance</h4>
+              <p>Five operations keep the bank compact and evolving: <em>refine</em> updates contracts, <em>materialize</em> promotes new skills, <em>merge</em> removes duplicates, <em>split</em> marks broad skills for re-segmentation, and <em>retire</em> removes unused skills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
-
-<section class="section hero is-small">
-  <div class="container">
-    <h2 class="title is-3">The Dawn of MLLMs in Synthetic Videos</h2>
-
-    <p>We present selected cases from SoTA MLLM evaluations across each category. Hallucinations in model answers, common sense or physics violations in videos, and other notable cues in the video, questions, or ground truth are highlighted to assist the reader's understanding. More examples can be found in the Appendix of our paper.</p>
-    <br>
-    <p><strong>Note:</strong> The legend below explains all the symbols used to represent the State-of-the-Art (SoTA) MLLMs featured in our showcases for synthetic video generation and video question-answering.</p>
-    <div style="text-align: center;">
-    <img src="images/legend.png" width="700" alt="legend"></div>
-    <br>
-    <h4 class="title is-4">Alignment</h4>
-    <p><strong>Video Generation Prompt:</strong>  A young male athlete is playing basketball on an outdoor court, performing impressive dribbling and slam dunks.
-    </p><br>
-
-    <p><strong>Synthetic Video:</strong></p>
-    <div style="text-align: center;">
-      <img src="images/alignment.gif" width="700" alt="Alignment"><br><br>
-    </div>
-    <p><strong>Video Question-Answering by MLLMs:</strong></p>
-    <div style="text-align: center;">
-      <img src="./images/alignment.png" width="700" alt="alignment_vqa">
-    </div>
-<br>
-    <h4 class="title is-4">Spatial-temporal Consistency</h4>
-    <p><strong>Video Generation Prompt:</strong> Generate a quail and a rooster celebrating New Year.
-    </p><br>
-
-    <p><strong>Synthetic Video:</strong></p>
-    <div style="text-align: center;">
-      <img src="images/rooster.gif" width="700" alt="STC"><br><br>
-    </div>
-    <p><strong>Video Question-Answering by MLLMs:</strong></p>
-    <div style="text-align: center;">
-      <img src="./images/STC.png" width="700" alt="stc_vqa">
-    </div><br>
-
-    <h4 class="title is-4">Common Sense Reasoning</h4>
-    <p><strong>Video Generation Prompt:</strong> A feather and a heavy rock are released at the same height and begin to fall to the ground on Earth.
-    </p><br>
-    <p><strong>Synthetic Video:</strong></p>
-    <div style="text-align: center;">
-      <img src="images/feather_veo2.gif" width="700" alt="CSR"><br><br>
-    </div>
-    <p><strong>Video Question-Answering by MLLMs:</strong></p>
-    <div style="text-align: center;">
-      <img src="./images/CSR.png" width="700" alt="stc_vqa">
-    </div>
-    <br>
-
-    <h4 class="title is-4">Physics</h4>
-    <p><strong>Video Generation Prompt:</strong> Generate the sequence showing a bullet being shot into a watermelon.
-    </p><br>
-    <p><strong>Synthetic Video:</strong></p>
-    <div style="text-align: center;">
-      <img src="images/watermelon_explode-ezgif.com-video-to-gif-converter.gif" width="700" alt="CSR"><br><br>
-    </div>
-    <p><strong>Video Question-Answering by MLLMs:</strong></p>
-    <div style="text-align: center;">
-      <img src="./images/P.png" width="700" alt="stc_vqa">
-    </div>
-
   </div>
 </section>
 
-<section class="section hero is-small">
-  <div class="hero-body">
-    <div class="container">
-    <h2 class="title is-3">Evaluation over SoTA MLLMs</h2>
-      <p>We evaluate diverse SoTA models across sizes and training strategies, reporting both overall and sub-category accuracies. Qwen2.5-VL-32B achieves the highest overall performance among all models.
-      </p>
-      <div style="text-align: center;">
-        <img src="./images/all_results.png" width="1000" alt="stc_vqa">
+
+<!-- Key Highlights -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Key Highlights</h2>
+    <div class="columns is-multiline">
+      <div class="column is-3">
+        <div class="has-text-centered">
+          <p class="title is-1 has-text-success">25.1%</p>
+          <p class="subtitle is-5">Average Improvement</p>
+        </div>
       </div>
-      <br>
-      <p>
-         We evaluate SoTA MLLMs on VideoHallu, with results broken down by sub-category. From left to right, we show: (a) models under 7B parameters; (b) models between 7B–38B; (c) R1 fine-tuned models; and (d) large black-box MLLMs. While many perform well on alignment tasks, they remain prone to hallucinations in reasoning-heavy tasks, with notably weaker performance on physics and commonsense reasoning.
-      </p>
-      <div style="text-align: center;">
-        <img src="./images/all_radar.png" width="1200" alt="stc_vqa">
+      <div class="column is-3">
+        <div class="has-text-centered">
+          <p class="title is-1 has-text-info">6</p>
+          <p class="subtitle is-5">Game Environments</p>
+        </div>
       </div>
+      <div class="column is-3">
+        <div class="has-text-centered">
+          <p class="title is-1 has-text-warning-dark">8B</p>
+          <p class="subtitle is-5">Base Model (Qwen3-8B)</p>
+        </div>
+      </div>
+      <div class="column is-3">
+        <div class="has-text-centered">
+          <p class="title is-1 has-text-danger">5</p>
+          <p class="subtitle is-5">LoRA Adapters</p>
+        </div>
       </div>
     </div>
+    <div class="content has-text-justified" style="margin-top:1rem;">
+      <p>
+        Evaluated across <strong>six</strong> game environments: 2048, Tetris, Candy Crush, Super Mario Bros (single-player), Avalon, and Diplomacy (multi-player).
+        Built on <strong>Qwen3-8B</strong>, COS-PLAY achieves over <strong>25.1% average reward improvement</strong> against four frontier LLM baselines (GPT-5.4, Gemini-3.1-Pro, Claude-4.6-Sonnet, GPT-OSS-120B) on single-player game benchmarks while remaining competitive on multi-player social reasoning games.
+      </p>
+    </div>
+  </div>
 </section>
 
-<section class="section hero is-small">
-  <div class="hero-body">
-    <div class="container">
-    <h2 class="title is-3">Fine-tuning Results</h2>
-      <p>We evaluate models fine-tuned on either domain-specific sub-datasets or curriculum-based composite datasets. Results show that models trained only on general real-world videos yield little to no gains on synthetic video understanding. Incorporating general physics data improves physics reasoning, and a curriculum starting with real-world physics followed by synthetic data leads to a 2.8% performance boost.
-      </p>
-      <div style="text-align: center;">
-        <img src="./images/ft_results.png" width="1000" alt="stc_vqa">
-      </div>
-      <br>
-      <p>
-         We show results for (a) previous SoTA MLLMs, (b) models fine-tuned on sub-datasets, and (c) models fine-tuned on the full dataset via curriculum learning. Compared to the baseline (Qwen2.5-VL-7B), reinforcement fine-tuning on commonsense and physics data improves models' reasoning and overall performance in synthetic video understanding.
-      </p>
-      <div style="text-align: center;">
-        <img src="./images/ft_radar.png" width="900" alt="stc_vqa">
-      </div>
+
+<!-- Results Tables -->
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-widescreen">
+    <h2 class="title is-3 has-text-centered">Experimental Results</h2>
+
+    <!-- Main Results Table -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Performance Across Game Categories</h3>
+        <p class="content">We report <strong>reward</strong> for single-player games, <strong>overall win rate</strong> for Avalon, and <strong>overall mean supply centers</strong> for Diplomacy. All results with <strong>95% confidence intervals</strong>, based on <strong>16 evaluation rollouts</strong> for single-player games and <strong>10 rollouts per player</strong> for multi-player games.</p>
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-hoverable is-fullwidth results-table">
+            <thead>
+              <tr>
+                <th rowspan="2">Model</th>
+                <th colspan="5" class="has-text-centered">Single-Player</th>
+                <th colspan="2" class="has-text-centered">Multi-Player</th>
+              </tr>
+              <tr>
+                <th class="has-text-centered">2048<br>Reward &uarr;</th>
+                <th class="has-text-centered">Tetris<br>Reward &uarr;</th>
+                <th class="has-text-centered">Candy Crush<br>Reward &uarr;</th>
+                <th class="has-text-centered">Super Mario<br>Reward &uarr;</th>
+                <th class="has-text-centered">Avg.<br>Reward &uarr;</th>
+                <th class="has-text-centered">Avalon<br>Win Rate &uarr;</th>
+                <th class="has-text-centered">Diplomacy<br>Mean SC &uarr;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GPT-5.4</td>
+                <td class="has-text-centered"><strong>1126.6</strong> &pm; 150.2</td>
+                <td class="has-text-centered"><strong>458.2</strong> &pm; 203.5</td>
+                <td class="has-text-centered"><strong>532.6</strong> &pm; 24.8</td>
+                <td class="has-text-centered">752.0 &pm; 35.7</td>
+                <td class="has-text-centered">717.4</td>
+                <td class="has-text-centered"><strong>65.0</strong> &pm; 14.2</td>
+                <td class="has-text-centered"><strong>4.70</strong> &pm; 0.35</td>
+              </tr>
+              <tr>
+                <td>Gemini-3.1-Pro</td>
+                <td class="has-text-centered">813.3 &pm; 143.6</td>
+                <td class="has-text-centered">372.7 &pm; 157.7</td>
+                <td class="has-text-centered">334.3 &pm; 59.4</td>
+                <td class="has-text-centered">436.8 &pm; 86.1</td>
+                <td class="has-text-centered">489.3</td>
+                <td class="has-text-centered">42.0 &pm; 13.2</td>
+                <td class="has-text-centered">2.72 &pm; 0.26</td>
+              </tr>
+              <tr>
+                <td>Claude-4.6-Sonnet</td>
+                <td class="has-text-centered">945.0 &pm; 134.5</td>
+                <td class="has-text-centered">444.2 &pm; 182.6</td>
+                <td class="has-text-centered">328.6 &pm; 23.8</td>
+                <td class="has-text-centered">399.5 &pm; 53.4</td>
+                <td class="has-text-centered">529.3</td>
+                <td class="has-text-centered">40.0 &pm; 13.1</td>
+                <td class="has-text-centered">3.16 &pm; 0.19</td>
+              </tr>
+              <tr>
+                <td>GPT-OSS-120B</td>
+                <td class="has-text-centered">1029.5 &pm; 122.0</td>
+                <td class="has-text-centered">358.1 &pm; 139.7</td>
+                <td class="has-text-centered">334.4 &pm; 40.5</td>
+                <td class="has-text-centered"><strong>968.5</strong> &pm; 175.0</td>
+                <td class="has-text-centered">672.6</td>
+                <td class="has-text-centered">40.0 &pm; 13.1</td>
+                <td class="has-text-centered">2.46 &pm; 0.25</td>
+              </tr>
+              <tr class="has-background-light"><td colspan="8"></td></tr>
+              <tr>
+                <td>Qwen3-8B</td>
+                <td class="has-text-centered">131.0 &pm; 102.6</td>
+                <td class="has-text-centered">32.0 &pm; 8.5</td>
+                <td class="has-text-centered">519.9 &pm; 37.8</td>
+                <td class="has-text-centered">835.5 &pm; 161.6</td>
+                <td class="has-text-centered">379.6</td>
+                <td class="has-text-centered">30.0 &pm; 9.9</td>
+                <td class="has-text-centered">2.64 &pm; 0.18</td>
+              </tr>
+              <tr>
+                <td>&ensp;SFT w/o Skill</td>
+                <td class="has-text-centered">516.7 &pm; 172.3</td>
+                <td class="has-text-centered">28.2 &pm; 9.7</td>
+                <td class="has-text-centered">356.1 &pm; 30.1</td>
+                <td class="has-text-centered">736.8 &pm; 130.4</td>
+                <td class="has-text-centered">409.5</td>
+                <td class="has-text-centered">28.7 &pm; 9.7</td>
+                <td class="has-text-centered">2.75 &pm; 0.13</td>
+              </tr>
+              <tr>
+                <td>&ensp;SFT + 1st Skill</td>
+                <td class="has-text-centered">385.5 &pm; 239.7</td>
+                <td class="has-text-centered">35.8 &pm; 7.0</td>
+                <td class="has-text-centered">569.6 &pm; 29.5</td>
+                <td class="has-text-centered">871.9 &pm; 126.2</td>
+                <td class="has-text-centered">465.7</td>
+                <td class="has-text-centered">21.2 &pm; 8.9</td>
+                <td class="has-text-centered">2.89 &pm; 0.20</td>
+              </tr>
+              <tr>
+                <td>&ensp;SFT + Final Skill</td>
+                <td class="has-text-centered">64.8 &pm; 46.0</td>
+                <td class="has-text-centered">24.4 &pm; 7.0</td>
+                <td class="has-text-centered">554.4 &pm; 24.3</td>
+                <td class="has-text-centered">794.4 &pm; 112.9</td>
+                <td class="has-text-centered">359.5</td>
+                <td class="has-text-centered">25.0 &pm; 9.3</td>
+                <td class="has-text-centered">2.65 &pm; 0.25</td>
+              </tr>
+              <tr>
+                <td>&ensp;GRPO w/o Skill</td>
+                <td class="has-text-centered">510.0 &pm; 249.5</td>
+                <td class="has-text-centered">96.7 &pm; 30.3</td>
+                <td class="has-text-centered">163.3 &pm; 71.4</td>
+                <td class="has-text-centered">669.4 &pm; 130.1</td>
+                <td class="has-text-centered">359.9</td>
+                <td class="has-text-centered">36.2 &pm; 10.3</td>
+                <td class="has-text-centered">2.76 &pm; 0.19</td>
+              </tr>
+              <tr>
+                <td>&ensp;GRPO + 1st Skill</td>
+                <td class="has-text-centered">152.0 &pm; 107.9</td>
+                <td class="has-text-centered">93.7 &pm; 37.7</td>
+                <td class="has-text-centered">353.8 &pm; 20.2</td>
+                <td class="has-text-centered">621.2 &pm; 130.2</td>
+                <td class="has-text-centered">305.2</td>
+                <td class="has-text-centered">31.2 &pm; 10.0</td>
+                <td class="has-text-centered">2.56 &pm; 0.22</td>
+              </tr>
+              <tr class="has-background-light"><td colspan="8"></td></tr>
+              <tr class="has-text-weight-bold has-background-white-ter">
+                <td>COS-PLAY (Qwen3-8B)</td>
+                <td class="has-text-centered">1589.0 &pm; 192.4</td>
+                <td class="has-text-centered">510.9 &pm; 199.5</td>
+                <td class="has-text-centered">648.8 &pm; 38.8</td>
+                <td class="has-text-centered">948.9 &pm; 153.2</td>
+                <td class="has-text-centered">924.4</td>
+                <td class="has-text-centered">39.0 &pm; 9.4</td>
+                <td class="has-text-centered">2.96 &pm; 0.20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+
+    <!-- Avalon Per-Role Breakdown -->
+    <div class="columns is-centered" style="margin-top:2rem;">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Per-Role Win Rates for Avalon</h3>
+        <p class="content">Win rates with 95% confidence for Good-side roles (Merlin, Servant) and Evil-side roles (Assassin, Minion), evaluated against GPT-5.4 opponents.</p>
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-hoverable is-fullwidth results-table">
+            <thead>
+              <tr>
+                <th rowspan="2">Model</th>
+                <th colspan="3" class="has-text-centered">Good</th>
+                <th colspan="3" class="has-text-centered">Evil</th>
+                <th rowspan="2" class="has-text-centered">Avg.<br>Win Rate &uarr;</th>
+              </tr>
+              <tr>
+                <th class="has-text-centered">Merlin &uarr;</th>
+                <th class="has-text-centered">Servant &uarr;</th>
+                <th class="has-text-centered">Good Avg. &uarr;</th>
+                <th class="has-text-centered">Assassin &uarr;</th>
+                <th class="has-text-centered">Minion &uarr;</th>
+                <th class="has-text-centered">Evil Avg. &uarr;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GPT-5.4</td>
+                <td class="has-text-centered"><strong>62.5</strong> &pm; 27.9</td>
+                <td class="has-text-centered"><strong>47.4</strong> &pm; 20.5</td>
+                <td class="has-text-centered"><strong>51.9</strong> &pm; 17.7</td>
+                <td class="has-text-centered"><strong>100.0</strong> &pm; 19.5</td>
+                <td class="has-text-centered"><strong>85.7</strong> &pm; 24.4</td>
+                <td class="has-text-centered"><strong>92.3</strong> &pm; 15.9</td>
+                <td class="has-text-centered"><strong>65.0</strong> &pm; 14.2</td>
+              </tr>
+              <tr>
+                <td>Gemini-3.1-Pro</td>
+                <td class="has-text-centered">10.0 &pm; 19.3</td>
+                <td class="has-text-centered">36.4 &pm; 18.7</td>
+                <td class="has-text-centered">28.1 &pm; 14.9</td>
+                <td class="has-text-centered">66.7 &pm; 30.2</td>
+                <td class="has-text-centered">66.7 &pm; 23.6</td>
+                <td class="has-text-centered">66.7 &pm; 20.0</td>
+                <td class="has-text-centered">42.0 &pm; 13.2</td>
+              </tr>
+              <tr>
+                <td>Claude-4.6-Sonnet</td>
+                <td class="has-text-centered">30.0 &pm; 24.8</td>
+                <td class="has-text-centered">40.9 &pm; 19.0</td>
+                <td class="has-text-centered">37.5 &pm; 15.9</td>
+                <td class="has-text-centered">33.3 &pm; 30.2</td>
+                <td class="has-text-centered">50.0 &pm; 24.6</td>
+                <td class="has-text-centered">44.4 &pm; 20.9</td>
+                <td class="has-text-centered">40.0 &pm; 13.1</td>
+              </tr>
+              <tr>
+                <td>GPT-OSS-120B</td>
+                <td class="has-text-centered">30.0 &pm; 24.8</td>
+                <td class="has-text-centered">31.8 &pm; 18.2</td>
+                <td class="has-text-centered">31.2 &pm; 15.3</td>
+                <td class="has-text-centered">50.0 &pm; 31.2</td>
+                <td class="has-text-centered">58.3 &pm; 24.4</td>
+                <td class="has-text-centered">55.6 &pm; 20.9</td>
+                <td class="has-text-centered">40.0 &pm; 13.1</td>
+              </tr>
+              <tr class="has-background-light"><td colspan="8"></td></tr>
+              <tr>
+                <td>Qwen3-8B</td>
+                <td class="has-text-centered">18.8 &pm; 18.2</td>
+                <td class="has-text-centered">18.4 &pm; 12.1</td>
+                <td class="has-text-centered">18.5 &pm; 10.2</td>
+                <td class="has-text-centered">66.7 &pm; 23.6</td>
+                <td class="has-text-centered">42.9 &pm; 23.0</td>
+                <td class="has-text-centered">53.8 &pm; 17.9</td>
+                <td class="has-text-centered">30.0 &pm; 9.9</td>
+              </tr>
+              <tr class="has-text-weight-bold has-background-white-ter">
+                <td>COS-PLAY (Qwen3-8B)</td>
+                <td class="has-text-centered">33.3 &pm; 17.7</td>
+                <td class="has-text-centered">23.3 &pm; 12.2</td>
+                <td class="has-text-centered"><strong>26.9</strong> &pm; 10.4</td>
+                <td class="has-text-centered">64.3 &pm; 22.5</td>
+                <td class="has-text-centered">63.2 &pm; 20.0</td>
+                <td class="has-text-centered">63.6 &pm; 15.6</td>
+                <td class="has-text-centered"><strong>39.0</strong> &pm; 9.4</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Diplomacy Per-Power Breakdown -->
+    <div class="columns is-centered" style="margin-top:2rem;">
+      <div class="column is-full-width">
+        <h3 class="title is-4">Per-Power Mean Supply Centers for Diplomacy</h3>
+        <p class="content">Mean supply centers per power with 95% confidence intervals. GPT-5.4 is evaluated in self-play; all other models are evaluated against GPT-5.4.</p>
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-hoverable is-fullwidth results-table">
+            <thead>
+              <tr>
+                <th rowspan="2">Model</th>
+                <th colspan="7" class="has-text-centered">Diplomacy</th>
+                <th rowspan="2" class="has-text-centered">Mean<br>SC &uarr;</th>
+              </tr>
+              <tr>
+                <th class="has-text-centered">Austria &uarr;</th>
+                <th class="has-text-centered">England &uarr;</th>
+                <th class="has-text-centered">France &uarr;</th>
+                <th class="has-text-centered">Germany &uarr;</th>
+                <th class="has-text-centered">Italy &uarr;</th>
+                <th class="has-text-centered">Russia &uarr;</th>
+                <th class="has-text-centered">Turkey &uarr;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>GPT-5.4</td>
+                <td class="has-text-centered"><strong>4.38</strong> &pm; 1.34</td>
+                <td class="has-text-centered"><strong>4.12</strong> &pm; 0.82</td>
+                <td class="has-text-centered"><strong>4.50</strong> &pm; 1.09</td>
+                <td class="has-text-centered"><strong>5.12</strong> &pm; 0.95</td>
+                <td class="has-text-centered"><strong>4.50</strong> &pm; 0.77</td>
+                <td class="has-text-centered"><strong>5.12</strong> &pm; 1.52</td>
+                <td class="has-text-centered"><strong>5.12</strong> &pm; 0.95</td>
+                <td class="has-text-centered"><strong>4.70</strong> &pm; 0.35</td>
+              </tr>
+              <tr>
+                <td>Gemini-3.1-Pro</td>
+                <td class="has-text-centered">2.50 &pm; 0.89</td>
+                <td class="has-text-centered">2.38 &pm; 0.63</td>
+                <td class="has-text-centered">3.12 &pm; 0.70</td>
+                <td class="has-text-centered">2.88 &pm; 0.82</td>
+                <td class="has-text-centered">3.14 &pm; 0.35</td>
+                <td class="has-text-centered">3.14 &pm; 0.35</td>
+                <td class="has-text-centered">1.86 &pm; 1.24</td>
+                <td class="has-text-centered">2.72 &pm; 0.26</td>
+              </tr>
+              <tr>
+                <td>Claude-4.6-Sonnet</td>
+                <td class="has-text-centered">3.20 &pm; 0.56</td>
+                <td class="has-text-centered">2.90 &pm; 0.41</td>
+                <td class="has-text-centered">3.50 &pm; 0.70</td>
+                <td class="has-text-centered">3.78 &pm; 0.64</td>
+                <td class="has-text-centered">3.20 &pm; 0.30</td>
+                <td class="has-text-centered">2.80 &pm; 0.30</td>
+                <td class="has-text-centered">2.80 &pm; 0.66</td>
+                <td class="has-text-centered">3.16 &pm; 0.19</td>
+              </tr>
+              <tr>
+                <td>GPT-OSS-120B</td>
+                <td class="has-text-centered">1.75 &pm; 1.07</td>
+                <td class="has-text-centered">2.88 &pm; 0.29</td>
+                <td class="has-text-centered">2.88 &pm; 0.29</td>
+                <td class="has-text-centered">2.62 &pm; 0.44</td>
+                <td class="has-text-centered">3.00 &pm; 0.00</td>
+                <td class="has-text-centered">2.88 &pm; 0.29</td>
+                <td class="has-text-centered">1.25 &pm; 0.97</td>
+                <td class="has-text-centered">2.46 &pm; 0.25</td>
+              </tr>
+              <tr class="has-background-light"><td colspan="9"></td></tr>
+              <tr>
+                <td>Qwen3-8B</td>
+                <td class="has-text-centered">1.62 &pm; 0.26</td>
+                <td class="has-text-centered">2.75 &pm; 0.25</td>
+                <td class="has-text-centered">2.75 &pm; 0.16</td>
+                <td class="has-text-centered">2.88 &pm; 0.12</td>
+                <td class="has-text-centered">3.00 &pm; 0.00</td>
+                <td class="has-text-centered">2.88 &pm; 0.23</td>
+                <td class="has-text-centered">2.62 &pm; 0.18</td>
+                <td class="has-text-centered">2.64 &pm; 0.18</td>
+              </tr>
+              <tr class="has-text-weight-bold has-background-white-ter">
+                <td>COS-PLAY (Qwen3-8B)</td>
+                <td class="has-text-centered">2.22 &pm; 0.55</td>
+                <td class="has-text-centered">2.70 &pm; 0.42</td>
+                <td class="has-text-centered">3.10 &pm; 0.46</td>
+                <td class="has-text-centered"><strong>3.12</strong> &pm; 0.58</td>
+                <td class="has-text-centered"><strong>3.20</strong> &pm; 0.39</td>
+                <td class="has-text-centered"><strong>3.30</strong> &pm; 0.30</td>
+                <td class="has-text-centered">3.00 &pm; 0.72</td>
+                <td class="has-text-centered"><strong>2.96</strong> &pm; 0.20</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- General Reasoning -->
+    <div class="columns is-centered" style="margin-top:2rem;">
+      <div class="column is-full-width">
+        <h3 class="title is-4">General Reasoning (Catastrophic Forgetting Check)</h3>
+        <p class="content">COS-PLAY preserves general reasoning capabilities with minimal degradation.</p>
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-hoverable results-table" style="width:auto; margin:0 auto;">
+            <thead>
+              <tr>
+                <th>Model</th>
+                <th class="has-text-centered">MMLU-Pro Acc. &uarr;</th>
+                <th class="has-text-centered">Math-500 EM &uarr;</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Qwen3-8B</td><td class="has-text-centered">61.99%</td><td class="has-text-centered">46.40%</td></tr>
+              <tr class="has-text-weight-bold has-background-white-ter"><td>COS-PLAY</td><td class="has-text-centered">61.15%</td><td class="has-text-centered">44.60%</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="section" id="BibTeX">
+
+<!-- Skill Bank Evolution -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Skill Bank Evolution</h2>
+        <div class="content has-text-justified">
+          <p>
+            We visualize how the skill bank evolves during Diplomacy training: (a) strategic function categories grow richer over training, (b) intention composition diversifies, and (c) the active bank stays compact at 55&ndash;70 skills while 121 are discovered and 53 pruned via merge/split/retirement.
+          </p>
+        </div>
+        <img src="./images/figure_final.png" alt="Skill bank evolution over Diplomacy training" style="width:100%; border-radius:10px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Training Curves -->
+<section class="section" style="background-color: #f5f5f5;">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Training Reward Curves</h2>
+        <div class="content has-text-justified">
+          <p>
+            Training reward curves across all six games show steady improvement in single-player games and equilibrium convergence in multi-player self-play.
+          </p>
+        </div>
+        <img src="./images/all_games_combined.png" alt="Training reward curves for all games" style="width:100%; border-radius:10px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Contributions -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Contributions</h2>
+    <div class="content">
+      <ol>
+        <li><strong>Co-evolution framework:</strong> We propose a co-evolution framework for long-horizon gameplay that closes the loop between gameplay and skill learning: an LLM-based decision agent interacts with the environment to collect trajectories, and a skill bank agent converts these rollouts into reusable skills that improve future decision making.</li>
+        <li><strong>Agentic skill-bank pipeline:</strong> We propose an agentic skill-bank pipeline for construction and maintenance that transforms unlabeled trajectories into reusable skills via boundary proposal, segmentation, contract learning, and bank curation&mdash;enabling skill-guided long-horizon decision making across diverse game environments.</li>
+        <li><strong>Comprehensive evaluation:</strong> We provide a comprehensive evaluation across six game environments requiring multi-hop skill usage, covering both task performance and skill reusability. Built on an 8B base model, COS-PLAY achieves over <strong>25.1%</strong> average gain against four frontier LLM baselines on single-player games while remaining competitive with SOTA LLMs on multi-player social reasoning tasks.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+
+<!-- BibTeX -->
+<section class="section" id="BibTeX" style="background-color: #f5f5f5;">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@misc{li2025videohalluevaluatingmitigatingmultimodal,
-      title={VideoHallu: Evaluating and Mitigating Multi-modal Hallucinations for Synthetic Videos},
-      author={Zongxia Li and Xiyang Wu and Yubin Qin and Guangyao Shi and Hongyang Du and Dinesh Manocha and Tianyi Zhou and Jordan Lee Boyd-Graber},
-      year={2025},
-      eprint={2505.01481},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2505.01481},
+    <pre><code>@inproceedings{wu2026cosplay,
+  title={Co-Evolving {LLM} Decision and Skill Bank Agents for Long-Horizon Game Play},
+  author={Wu, Xiyang and Li, Zongxia and Shi, Guangyao and Duffy, Alexander and Marques, Tyler and Olson, Matthew Lyle and Zhou, Tianyi and Manocha, Dinesh},
+  booktitle={Conference on Language Modeling (COLM)},
+  year={2026}
 }</code></pre>
   </div>
 </section>
@@ -316,11 +704,7 @@
 <footer class="footer">
   <div class="container">
     <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/wuxiyang1996/cos-play" class="external-link">
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -333,11 +717,7 @@
             Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            Website template borrowed from the <a href="https://nerfies.github.io">Nerfies</a> project page.
           </p>
         </div>
       </div>
