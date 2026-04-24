@@ -4,11 +4,14 @@ This is the repository that contains source code for the [COS-PLAY project page]
 
 If you find COS-PLAY useful for your work please cite:
 ```
-@inproceedings{wu2026cosplay,
-  title={Co-Evolving {LLM} Decision and Skill Bank Agents for Long-Horizon Game Play},
-  author={Wu, Xiyang and others},
-  booktitle={Conference on Language Modeling (COLM)},
-  year={2026}
+@misc{wu2026coevolvingllmdecisionskill,
+  title={Co-Evolving LLM Decision and Skill Bank Agents for Long-Horizon Tasks},
+  author={Xiyang Wu and Zongxia Li and Guangyao Shi and Alexander Duffy and Tyler Marques and Matthew Lyle Olson and Tianyi Zhou and Dinesh Manocha},
+  year={2026},
+  eprint={2604.20987},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2604.20987},
 }
 ```
 
